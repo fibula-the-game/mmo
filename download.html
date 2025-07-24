@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - Fibula MMORPG</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">FIBULA</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="download.html" class="download-btn active">Download</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title">Download Fibula</h1>
+            <p class="page-subtitle">Join the ultimate bone-crushing MMORPG adventure - completely free!</p>
+        </header>
+
+        <section class="download-hero">
+            <div class="download-content">
+                <div class="download-info">
+                    <h2>Ready to Start Your Bone Adventure?</h2>
+                    <p>Download Fibula now and join thousands of players in the most bone-crushing MMORPG ever created! The game is completely free to play with no hidden costs.</p>
+                    
+                    <div class="download-stats">
+                        <div class="stat">
+                            <span class="stat-number">15.2 GB</span>
+                            <span class="stat-label">Download Size</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">47K+</span>
+                            <span class="stat-label">Active Players</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Free</span>
+                            <span class="stat-label">To Play</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-options">
+                    <div class="download-card">
+                        <div class="download-icon">🖥️</div>
+                        <h3>Windows</h3>
+                        <p>Download for Windows 10/11</p>
+                        <div class="download-size">15.2 GB</div>
+                        <button class="download-button" onclick="startDownload('windows')">
+                            <span class="download-text">Download for Windows</span>
+                            <span class="download-progress" style="width: 0%"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">🍎</div>
+                        <h3>macOS</h3>
+                        <p>Download for macOS 10.15+</p>
+                        <div class="download-size">14.8 GB</div>
+                        <button class="download-button" onclick="startDownload('macos')">
+                            <span class="download-text">Download for macOS</span>
+                            <span class="download-progress" style="width: 0%"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">🐧</div>
+                        <h3>Linux</h3>
+                        <p>Download for Ubuntu 20.04+</p>
+                        <div class="download-size">14.5 GB</div>
+                        <button class="download-button" onclick="startDownload('linux')">
+                            <span class="download-text">Download for Linux</span>
+                            <span class="download-progress" style="width: 0%"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="system-requirements">
+            <h2 class="section-title">System Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirements-card">
+                    <h3>Minimum Requirements</h3>
+                    <div class="requirement-item">
+                        <span class="requirement-label">OS</span>
+                        <span class="requirement-value">Windows 10 (64-bit)</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Processor</span>
+                        <span class="requirement-value">Intel Core i3-6100</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Memory</span>
+                        <span class="requirement-value">8 GB RAM</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Graphics</span>
+                        <span class="requirement-value">NVIDIA GTX 750 Ti</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Storage</span>
+                        <span class="requirement-value">15 GB available space</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Network</span>
+                        <span class="requirement-value">Broadband internet connection</span>
+                    </div>
+                </div>
+                
+                <div class="requirements-card">
+                    <h3>Recommended Requirements</h3>
+                    <div class="requirement-item">
+                        <span class="requirement-label">OS</span>
+                        <span class="requirement-value">Windows 11 (64-bit)</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Processor</span>
+                        <span class="requirement-value">Intel Core i5-8400</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Memory</span>
+                        <span class="requirement-value">16 GB RAM</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Graphics</span>
+                        <span class="requirement-value">NVIDIA GTX 1060</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Storage</span>
+                        <span class="requirement-value">25 GB available space</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">Network</span>
+                        <span class="requirement-value">Broadband internet connection</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="installation-guide">
+            <h2 class="section-title">Installation Guide</h2>
+            <div class="installation-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Download the Game</h3>
+                        <p>Click the download button for your operating system above. The download will start automatically.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Run the Installer</h3>
+                        <p>Once the download is complete, run the installer and follow the on-screen instructions.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Create Your Account</h3>
+                        <p>Launch the game and create your free account. No credit card required!</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start Playing</h3>
+                        <p>Choose your bone class and begin your adventure in the world of Fibula!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-features">
+            <h2 class="section-title">What's Included</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Full Game Access</h3>
+                    <p>Access to all game content, classes, and features completely free.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Vast World</h3>
+                    <p>Explore over 1,200 unique locations and discover hidden secrets.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">⚔️</div>
+                    <h3>PvP Combat</h3>
+                    <p>Unlimited PvP battles in the Marrow Arena with ranked matchmaking.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🏰</div>
+                    <h3>Guild System</h3>
+                    <p>Join or create guilds with exclusive guild halls and content.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Customization</h3>
+                    <p>Customize your character with hundreds of bone-themed items.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Cross-Platform</h3>
+                    <p>Play with friends across Windows, macOS, and Linux.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Is Fibula really free to play?</h3>
+                    <p>Yes! Fibula is completely free to download and play. There are no hidden costs or pay-to-win mechanics.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do I need a powerful computer to play?</h3>
+                    <p>Fibula is optimized to run on a wide range of systems. Check the system requirements above for details.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I play with my friends?</h3>
+                    <p>Absolutely! Fibula is a multiplayer game where you can team up with friends, join guilds, and participate in group activities.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How long does the download take?</h3>
+                    <p>Download time depends on your internet connection. With a typical broadband connection, it should take 30-60 minutes.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Is there a mobile version?</h3>
+                    <p>Currently, Fibula is only available for PC. Mobile versions are planned for future release.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What if I encounter problems?</h3>
+                    <p>Our support team is here to help! Visit our <a href="community.html">community page</a> for support options.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Join the Bone Revolution?</h2>
+            <p>Download now and become part of the most bone-crushing MMORPG community ever!</p>
+            <div class="cta-buttons">
+                <button class="play-button" onclick="startDownload('windows')">Download Now - It's Free!</button>
+                <a href="classes.html" class="secondary-button">Learn About Classes</a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Fibula</h3>
+                <p>The ultimate bone-crushing MMORPG experience!</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">Discord</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Game</h4>
+                <ul>
+                    <li><a href="game.html">Features</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="world.html">World</a></li>
+                    <li><a href="download.html">Download</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="community.html">Forums</a></li>
+                    <li><a href="community.html">Discord</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="community.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fibula Games. All bones reserved. Not affiliated with any real bones, living or dead.</p>
+            <p>Remember: Drink your milk and play responsibly!</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        function startDownload(platform) {
+            const button = event.target;
+            const progressBar = button.querySelector('.download-progress');
+            const text = button.querySelector('.download-text');
+            
+            // Simulate download progress
+            text.textContent = 'Downloading...';
+            let progress = 0;
+            
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    text.textContent = 'Download Complete!';
+                    setTimeout(() => {
+                        text.textContent = `Download for ${platform.charAt(0).toUpperCase() + platform.slice(1)}`;
+                        progressBar.style.width = '0%';
+                    }, 2000);
+                }
+                progressBar.style.width = progress + '%';
+            }, 200);
+        }
+    </script>
+</body>
+</html> 

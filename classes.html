@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Classes - Fibula MMORPG</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">FIBULA</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="classes.html" class="active">Classes</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="download.html" class="download-btn">Download</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title">Choose Your Bone Class</h1>
+            <p class="page-subtitle">Each class offers unique abilities and playstyles. Which skeleton warrior will you become?</p>
+        </header>
+
+        <section id="knight" class="class-detail">
+            <div class="class-hero">
+                <div class="class-visual">
+                    <div class="class-model">🦴</div>
+                    <div class="class-effects">
+                        <div class="effect">✨</div>
+                        <div class="effect">🛡️</div>
+                    </div>
+                </div>
+                <div class="class-info">
+                    <h2>Bone Knight</h2>
+                    <p class="class-description">The stalwart defenders of the bone realm. Bone Knights are masters of calcium-based warfare, combining high defense with moderate attack power. They excel at protecting allies and holding the front lines.</p>
+                    
+                    <div class="class-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Attack</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Magic</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-abilities">
+                <h3>Special Abilities</h3>
+                <div class="abilities-grid">
+                    <div class="ability-card">
+                        <div class="ability-icon">🛡️</div>
+                        <h4>Bone Shield</h4>
+                        <p>Creates an impenetrable barrier of calcium that blocks all incoming damage for 10 seconds.</p>
+                        <div class="ability-cost">Cost: 50 Bone Energy</div>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">⚔️</div>
+                        <h4>Calcium Strike</h4>
+                        <p>A powerful melee attack that deals bonus damage based on your bone density.</p>
+                        <div class="ability-cost">Cost: 25 Bone Energy</div>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">🦴</div>
+                        <h4>Marrow Fortress</h4>
+                        <p>Increases your defense and grants immunity to bone-breaking effects for 15 seconds.</p>
+                        <div class="ability-cost">Cost: 75 Bone Energy</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-progression">
+                <h3>Level Progression</h3>
+                <div class="progression-tree">
+                    <div class="tier">
+                        <h4>Tier 1 (Level 1-10)</h4>
+                        <ul>
+                            <li>Basic Bone Strike</li>
+                            <li>Calcium Armor</li>
+                            <li>Bone Density Training</li>
+                        </ul>
+                    </div>
+                    <div class="tier">
+                        <h4>Tier 2 (Level 11-25)</h4>
+                        <ul>
+                            <li>Bone Shield</li>
+                            <li>Marrow Fortress</li>
+                            <li>Calcium Strike</li>
+                        </ul>
+                    </div>
+                    <div class="tier">
+                        <h4>Tier 3 (Level 26-50)</h4>
+                        <ul>
+                            <li>Bone Storm</li>
+                            <li>Unbreakable Will</li>
+                            <li>Legendary Bone Armor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mage" class="class-detail">
+            <div class="class-hero">
+                <div class="class-info">
+                    <h2>Skull Mage</h2>
+                    <p class="class-description">Masters of ancient bone magic, Skull Mages harness the mystical properties of calcium and marrow to cast devastating spells. They excel at ranged combat and area damage.</p>
+                    
+                    <div class="class-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Magic</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Attack</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-visual">
+                    <div class="class-model">💀</div>
+                    <div class="class-effects">
+                        <div class="effect">✨</div>
+                        <div class="effect">🔮</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-abilities">
+                <h3>Special Abilities</h3>
+                <div class="abilities-grid">
+                    <div class="ability-card">
+                        <div class="ability-icon">🔮</div>
+                        <h4>Marrow Missile</h4>
+                        <p>Launches a concentrated beam of bone energy that pierces through multiple enemies.</p>
+                        <div class="ability-cost">Cost: 40 Bone Energy</div>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">💀</div>
+                        <h4>Skull Storm</h4>
+                        <p>Summons a storm of floating skulls that attack all enemies in a large area.</p>
+                        <div class="ability-cost">Cost: 80 Bone Energy</div>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">✨</div>
+                        <h4>Bone Teleport</h4>
+                        <p>Instantly teleport to any location within line of sight using bone magic.</p>
+                        <div class="ability-cost">Cost: 60 Bone Energy</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ranger" class="class-detail">
+            <div class="class-hero">
+                <div class="class-visual">
+                    <div class="class-model">🏹</div>
+                    <div class="class-effects">
+                        <div class="effect">✨</div>
+                        <div class="effect">🎯</div>
+                    </div>
+                </div>
+                <div class="class-info">
+                    <h2>Rib Ranger</h2>
+                    <p class="class-description">Swift and agile archers who use bone arrows and rib-based weaponry. Rib Rangers excel at hit-and-run tactics and precision strikes from a distance.</p>
+                    
+                    <div class="class-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Agility</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Range</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-abilities">
+                <h3>Special Abilities</h3>
+                <div class="abilities-grid">
+                    <div class="ability-card">
+                        <div class="ability-icon">🎯</div>
+                        <h4>Funny Bone Shot</h4>
+                        <p>Fires a special arrow that causes confusion and laughter in enemies, reducing their combat effectiveness.</p>
+                        <div class="ability-cost">Cost: 35 Bone Energy</div>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">🏹</div>
+                        <h4>Rib Rain</h4>
+                        <p>Rapidly fires multiple bone arrows in a spread pattern, hitting multiple targets simultaneously.</p>
+                        <div class="ability-cost">Cost: 50 Bone Energy</div>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">⚡</div>
+                        <h4>Bone Dash</h4>
+                        <p>Quickly dash forward while becoming temporarily invisible, perfect for repositioning in combat.</p>
+                        <div class="ability-cost">Cost: 30 Bone Energy</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assassin" class="class-detail">
+            <div class="class-hero">
+                <div class="class-info">
+                    <h2>Spine Assassin</h2>
+                    <p class="class-description">Deadly and elusive, Spine Assassins strike from the shadows with lightning speed. They excel at stealth operations and dealing massive burst damage to single targets.</p>
+                    
+                    <div class="class-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Stealth</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Attack</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-visual">
+                    <div class="class-model">⚡</div>
+                    <div class="class-effects">
+                        <div class="effect">✨</div>
+                        <div class="effect">🌑</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-abilities">
+                <h3>Special Abilities</h3>
+                <div class="abilities-grid">
+                    <div class="ability-card">
+                        <div class="ability-icon">⚡</div>
+                        <h4>Backbone Stab</h4>
+                        <p>A devastating critical strike that targets the spine, dealing massive damage and potentially paralyzing the target.</p>
+                        <div class="ability-cost">Cost: 45 Bone Energy</div>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">🌑</div>
+                        <h4>Shadow Step</h4>
+                        <p>Become invisible and move silently through shadows, perfect for stealth operations and surprise attacks.</p>
+                        <div class="ability-cost">Cost: 40 Bone Energy</div>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">💀</div>
+                        <h4>Death Mark</h4>
+                        <p>Mark a target for death, increasing all damage dealt to them and revealing their location through walls.</p>
+                        <div class="ability-cost">Cost: 60 Bone Energy</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="class-comparison">
+            <h2 class="section-title">Class Comparison</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Difficulty</th>
+                            <th>Role</th>
+                            <th>Best For</th>
+                            <th>Starting Equipment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bone Knight</td>
+                            <td>Easy</td>
+                            <td>Tank</td>
+                            <td>New Players</td>
+                            <td>Bone Shield, Calcium Sword</td>
+                        </tr>
+                        <tr>
+                            <td>Skull Mage</td>
+                            <td>Hard</td>
+                            <td>DPS</td>
+                            <td>Experienced Players</td>
+                            <td>Mystic Skull, Bone Staff</td>
+                        </tr>
+                        <tr>
+                            <td>Rib Ranger</td>
+                            <td>Medium</td>
+                            <td>Ranged DPS</td>
+                            <td>Strategic Players</td>
+                            <td>Bone Bow, Rib Arrows</td>
+                        </tr>
+                        <tr>
+                            <td>Spine Assassin</td>
+                            <td>Very Hard</td>
+                            <td>Stealth DPS</td>
+                            <td>Advanced Players</td>
+                            <td>Shadow Daggers, Stealth Cloak</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Choose Your Class?</h2>
+            <p>Each class offers a unique playstyle and progression path. Choose wisely, skeleton warrior!</p>
+            <div class="cta-buttons">
+                <a href="download.html" class="play-button">Start Your Adventure</a>
+                <a href="world.html" class="secondary-button">Explore the World</a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Fibula</h3>
+                <p>The ultimate bone-crushing MMORPG experience!</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">Discord</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Game</h4>
+                <ul>
+                    <li><a href="game.html">Features</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="world.html">World</a></li>
+                    <li><a href="download.html">Download</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="community.html">Forums</a></li>
+                    <li><a href="community.html">Discord</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="community.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fibula Games. All bones reserved. Not affiliated with any real bones, living or dead.</p>
+            <p>Remember: Drink your milk and play responsibly!</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html> 
