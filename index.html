@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibula - The Ultimate Fantasy MMORPG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(45deg, rgba(255,215,0,0.1), rgba(255,69,0,0.1));
+            margin-bottom: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #FFD700, #FF4500, #FF6347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 5px #FFD700); }
+            to { filter: drop-shadow(0 0 20px #FF4500); }
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .play-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #FF6B35, #F7931E);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+        }
+
+        .play-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255,107,53,0.6);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+
+        .game-stats {
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            padding: 20px;
+            background: linear-gradient(45deg, rgba(255,215,0,0.1), rgba(255,69,0,0.1));
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        .classes {
+            margin-bottom: 50px;
+        }
+
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .class-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .class-card:hover {
+            border-color: #FFD700;
+            transform: scale(1.05);
+        }
+
+        .news {
+            background: rgba(0,0,0,0.2);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+        }
+
+        .news-item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .news-date {
+            color: #FFD700;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 50px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            border: 2px solid #FFD700;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="logo">FIBULA</h1>
+            <p class="tagline">The bone that connects you to adventure!</p>
+            <a href="#" class="play-button" onclick="openModal()">Play Now - It's Free!</a>
+        </header>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🦴</div>
+                <h3 class="feature-title">Bone-crushing Combat</h3>
+                <p>Fight skeletons, bone dragons, and the dreaded Calcium Deficiency Boss! Our combat system is so realistic, you'll feel it in your bones.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏴‍☠️</div>
+                <h3 class="feature-title">Unlimited PvP</h3>
+                <p>Challenge other players to duels in the Marrow Arena! Warning: No actual bones were harmed in the making of this game.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🗺️</div>
+                <h3 class="feature-title">Vast World</h3>
+                <p>Explore the mystical lands of Boneshire, Calcium Caverns, and the infamous Funny Bone Forest where everything is hilariously painful.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚗️</div>
+                <h3 class="feature-title">Alchemy & Crafting</div>
+                <p>Brew powerful bone tonics and craft legendary weapons from ancient femurs! Perfect for the aspiring orthopedic adventurer.</p>
+            </div>
+        </section>
+
+        <section class="game-stats">
+            <h2>Join Thousands of Bone Warriors!</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">47,293</div>
+                    <div>Active Skeletons</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12,847</div>
+                    <div>Bones Collected</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,337</div>
+                    <div>Calcium Supplements Consumed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div>Bone Density</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="classes">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #FFD700;">Choose Your Bone Class</h2>
+            <div class="classes-grid">
+                <div class="class-card">
+                    <h3>🦴 Bone Knight</h3>
+                    <p>Masters of calcium-based warfare. High defense, moderate attack. Special ability: Bone Shield.</p>
+                </div>
+                <div class="class-card">
+                    <h3>💀 Skull Mage</h3>
+                    <p>Harness the power of ancient bone magic. High magic attack, low defense. Special ability: Marrow Missile.</p>
+                </div>
+                <div class="class-card">
+                    <h3>🏹 Rib Ranger</h3>
+                    <p>Swift archers with bone arrows. Balanced stats. Special ability: Funny Bone Shot (causes confusion).</p>
+                </div>
+                <div class="class-card">
+                    <h3>⚡ Spine Assassin</h3>
+                    <p>Quick and deadly. Very high speed, low defense. Special ability: Backbone Stab.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <h2 style="color: #FFD700; margin-bottom: 20px;">Latest Bone News</h2>
+            <div class="news-item">
+                <div class="news-date">July 20, 2025</div>
+                <h3>New Update: "The Funny Bone Expansion"</h3>
+                <p>We've added 50 new comedy-based bone weapons and a stand-up comedy skill tree!</p>
+            </div>
+            <div class="news-item">
+                <div class="news-date">July 15, 2025</div>
+                <h3>Calcium Event Weekend</h3>
+                <p>Double XP for all bone-related activities! Don't milk this opportunity!</p>
+            </div>
+            <div class="news-item">
+                <div class="news-date">July 10, 2025</div>
+                <h3>PvP Tournament: "Bone to Pick"</h3>
+                <p>Join the ultimate skeleton showdown! Winner gets the legendary Golden Femur weapon.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Fibula Games. All bones reserved. Not affiliated with any real bones, living or dead.</p>
+        <p>Remember: Drink your milk and play responsibly!</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 style="color: #FFD700;">Welcome to Fibula!</h2>
+            <p>Thanks for your interest in the boniest MMORPG ever created!</p>
+            <p>🦴 This is a parody website - no actual game exists (yet!)</p>
+            <p>But wouldn't it be humerus if it did? 😄</p>
+            <br>
+            <p><em>"The game that gets under your skin... because it IS your skin!"</em></p>
+        </div>
+    </div>
+
+    <script>
+        // Create animated stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('gameModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('gameModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('gameModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Animate stats on scroll
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const finalNumber = stat.textContent;
+                let currentNumber = 0;
+                const increment = parseInt(finalNumber.replace(/,/g, '')) / 100;
+                
+                const timer = setInterval(() => {
+                    currentNumber += increment;
+                    if (currentNumber >= parseInt(finalNumber.replace(/,/g, ''))) {
+                        stat.textContent = finalNumber;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(currentNumber).toLocaleString();
+                    }
+                }, 50);
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createStars();
+            
+            // Animate stats when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            observer.observe(document.querySelector('.game-stats'));
+        });
+
+        // Add some fun bone facts on click
+        const boneClicks = [
+            "Did you know? The human body has 206 bones!",
+            "Fun fact: Your funny bone isn't actually a bone!",
+            "Bone appetit! 🦴",
+            "That's a bone-a-fide fact!",
+            "I've got a bone to pick with you... just kidding!",
+            "This game is absolutely bone-kers!",
+            "No bones about it - this is fun!"
+        ];
+
+        let clickCount = 0;
+        document.addEventListener('click', function(e) {
+            if (Math.random() < 0.1) { // 10% chance
+                const fact = boneClicks[clickCount % boneClicks.length];
+                clickCount++;
+                
+                const tooltip = document.createElement('div');
+                tooltip.textContent = fact;
+                tooltip.style.cssText = `
+                    position: fixed;
+                    left: ${e.clientX}px;
+                    top: ${e.clientY - 30}px;
+                    background: rgba(255, 215, 0, 0.9);
+                    color: black;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    pointer-events: none;
+                    z-index: 1000;
+                    transition: opacity 0.5s;
+                `;
+                
+                document.body.appendChild(tooltip);
+                
+                setTimeout(() => {
+                    tooltip.style.opacity = '0';
+                    setTimeout(() => tooltip.remove(), 500);
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
