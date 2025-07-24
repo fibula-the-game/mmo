@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="favicon" width="32" height="32"></canvas>
+    <script>
+        const canvas = document.getElementById('favicon');
+        const ctx = canvas.getContext('2d');
+        
+        // Background gradient
+        const gradient = ctx.createLinearGradient(0, 0, 32, 32);
+        gradient.addColorStop(0, '#FFD700');
+        gradient.addColorStop(0.5, '#FFA500');
+        gradient.addColorStop(1, '#FF6347');
+        
+        // Draw background circle
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(16, 16, 15, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Draw bone shape
+        ctx.fillStyle = 'white';
+        ctx.strokeStyle = '#FF6B35';
+        ctx.lineWidth = 1;
+        
+        ctx.beginPath();
+        ctx.moveTo(8, 12);
+        ctx.lineTo(12, 12);
+        ctx.lineTo(12, 8);
+        ctx.lineTo(20, 8);
+        ctx.lineTo(20, 12);
+        ctx.lineTo(24, 12);
+        ctx.lineTo(24, 16);
+        ctx.lineTo(20, 16);
+        ctx.lineTo(20, 20);
+        ctx.lineTo(12, 20);
+        ctx.lineTo(12, 16);
+        ctx.lineTo(8, 16);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+        
+        // Draw bone details
+        ctx.fillStyle = '#FF6B35';
+        ctx.beginPath();
+        ctx.arc(12, 12, 1.5, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(20, 12, 1.5, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(12, 20, 1.5, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(20, 20, 1.5, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Center detail
+        ctx.fillStyle = '#FFD700';
+        ctx.beginPath();
+        ctx.arc(16, 16, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Convert to data URL
+        const dataURL = canvas.toDataURL('image/png');
+        console.log('Favicon data URL:', dataURL);
+        
+        // Create download link
+        const link = document.createElement('a');
+        link.download = 'favicon.png';
+        link.href = dataURL;
+        link.textContent = 'Download Favicon';
+        document.body.appendChild(link);
+    </script>
+</body>
+</html> 
